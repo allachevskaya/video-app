@@ -1,0 +1,30 @@
+@import "../../app/styles/mixin"
+
+.main
+    width: 100%
+    min-height: calc( 100vh - 300px )
+    background: $white
+    &Container
+        width: 1660px
+        margin: 0 auto
+        display: grid
+        grid-template-columns: 1.5fr 0.5fr
+        gap: 40px
+
+@media (max-width:1920px)
+    .main
+        min-height: auto
+        &Container
+            width: calcWidth1920(1660)
+@media (max-width:1440px)
+    .main
+        &Container
+            width: 90%
+
+@media (max-width:768px)
+    .main
+        padding: calcWidth768(20) 0
+        &Container
+            display: flex
+            flex-direction: column
+            gap: calcWidth768(20)

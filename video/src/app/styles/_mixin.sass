@@ -1,0 +1,75 @@
+@use 'sass:math'
+@function calcWidth1920($n)
+    @return $n*math.div(100vw,1920)
+@function calcWidth1440($n)
+    @return $n*math.div(100vw,1440)
+@function calcWidth992($n)
+    @return $n*math.div(100vw,992)
+@function calcWidth768($n)
+    @return $n*math.div(100vw,768)
+@function calcWidth480($n)
+    @return $n*math.div(100vw,480)
+@function calcWidth380($n)
+    @return $n*math.div(100vw,390)
+
+$white: #EDEDED
+$black: #171717
+
+@mixin customBtn($width,$height,$fz)
+    width: $width
+    height: $height
+    font-size: $fz
+    font-family: "SofiaSans-Regular", sans-serif
+    text-align: center
+    font-weight: normal
+    color: $white
+    background-color: #00000040
+    cursor: pointer
+    transition: all 0.3s ease-in-out
+    border-radius: 8px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-transform: lowercase
+    &:hover
+        translate: 0 -6px
+
+// // new colors 
+// $darcBlue: #005A8E
+// $textColor: #172540
+// @mixin customBtn($width,$height,$fz)
+//     width: $width
+//     height: $height
+//     font-size: $fz
+//     font-family: "Roboto-Medium", sans-serif
+//     text-align: center
+//     font-weight: normal
+//     color: $darcBlue
+//     background-color: #fff
+//     cursor: pointer
+//     transition: all 0.3s ease-in-out
+//     border-radius: 8px
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     text-transform: uppercase
+//     &:hover
+//         translate: 0 -6px
+
+// @mixin customTitle($paddingTop,$paddingBootom,$fz)
+//     width: 100%
+//     padding: $paddingTop 10px $paddingBootom
+//     font-size: $fz
+//     font-family: "Roboto-Bold", sans-serif
+//     text-align: center
+//     color: $main-text
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     text-transform: capitalize
+//     line-height: 160%
+
+// $mask: #1F1D1D80
+// $main-text: #3F465C
+
+// //navig swiper z-5

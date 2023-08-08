@@ -1,0 +1,41 @@
+@import "../../app/styles/mixin"
+.images
+    display: flex
+    justify-content: flex-start
+    position: relative
+    width: 100%
+    &Img
+        width: auto
+        height: 600px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &Title
+        height: auto
+        position: absolute
+        width: auto
+        left: 50%
+        bottom: 5%
+        h2
+            font-family: "Melinda", sans-serif
+            font-size: 150px
+            line-height: 113px
+            max-width: 90%
+@media (max-width:1920px)
+    .images
+        &Img
+            width: auto
+            height: calcWidth1920(600)
+        &Title
+            h2
+                font-size: calcWidth1920(150)
+                line-height: calcWidth1920(113)
+
+@media (max-width:768px)
+    .images
+        width: 100%
+        height: auto
+        &Img
+            width: 100%
+            height: auto

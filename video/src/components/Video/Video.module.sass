@@ -1,0 +1,239 @@
+@import "../../app/styles/mixin"
+
+.video
+    width: 100%
+    height: auto
+    &Container
+        width: 1660px
+        margin: 0 auto
+        height: 100%
+        padding: 66px 0
+        &Title
+            h2
+                font-family: "Aqum"
+                font-size: 38px
+            p
+                font-family: "SofiaSans-Regular"
+                font-size: 24px
+                max-width: 60%
+        &Content
+            margin-top: 40px
+            display: grid
+            grid-template-columns: 1.2fr 0.5fr
+            gap: 60px
+            &Video
+                width: 100%
+                height: 450px
+                cursor: pointer
+                &Img
+                    width: 100%
+                    height: 100%
+                    position: relative
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        object-position: center
+                        border-radius: 8px
+                    &Text
+                        position: absolute
+                        width: 100%
+                        height: 100%
+                        top: 0
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        &Circle
+                            width: 200px
+                            height: 200px
+                            position: relative
+                            svg
+                                width: 100%
+                                height: 100%
+                                animation: Orbita2 15s linear infinite
+                                text
+                                    font-family: "SofiaSans-Regular"
+                                    font-size: 11px
+                            &Img
+                                width: 50px
+                                height: 50px
+                                position: absolute
+                                top: 50%
+                                left: 50%
+                                transform: translate(-50%,-50%)
+                                img
+                                    width: 100%
+                                    height: 100%
+            &Text
+                display: flex
+                flex-direction: column
+                gap: 40px
+                h2
+                    font-family: "Aqum"
+                    font-size: 28px
+                p
+                    font-family: "SofiaSans-Regular"
+                    font-size: 20px
+                &Btn
+                    @include customBtn(250px, 50px, 20px)
+                    box-shadow: 6px 5px 8px 0px #ffffff2a
+                    margin: 0 auto
+
+@keyframes Orbita2
+    from
+        transform: rotate(360deg)
+    to
+        transform: rotate(0)
+
+@media (max-width:1920px)
+    .video
+        &Container
+            width: calcWidth1920(1660)
+            padding: calcWidth1920(66) 0
+            &Title
+                h2
+                    font-size: calcWidth1920(38)
+                p
+                    font-size: calcWidth1920(24)
+            &Content
+                margin-top: calcWidth1920(40)
+                display: grid
+                grid-template-columns: 1.2fr 0.5fr
+                gap: calcWidth1920(60)
+                &Video
+                    height: calcWidth1920(450)
+                    &Img
+                        &Text
+                            &Circle
+                                width: calcWidth1920(200)
+                                height: calcWidth1920(200)
+                                svg
+                                    text
+                                        font-size: calcWidth1920(11)
+                                &Img
+                                    width: calcWidth1920(50)
+                &Text
+                    gap: calcWidth1920(40)
+                    h2
+                        font-size: calcWidth1920(28)
+                    p
+                        font-size: calcWidth1920(20)
+                    &Btn
+                        @include customBtn(calcWidth1920(250), calcWidth1920(50), calcWidth1920(20))
+                        box-shadow: 6px 5px 8px 0px #ffffff2a
+                        margin: 0 auto
+@media (max-width:1440px)
+    .video
+        &Container
+            width: 90%
+            padding: calcWidth1440(66) 0
+            &Title
+                h2
+                    font-size: calcWidth1440(38)
+                p
+                    font-size: calcWidth1440(24)
+            &Content
+                margin-top: calcWidth1440(40)
+                display: grid
+                grid-template-columns: 1.2fr 0.5fr
+                gap: calcWidth1440(60)
+                &Video
+                    height: calcWidth1440(450)
+                    &Img
+                        &Text
+                            &Circle
+                                width: calcWidth1440(200)
+                                height: calcWidth1440(200)
+                                svg
+                                    text
+                                        font-size: calcWidth1440(11)
+                                &Img
+                                    width: calcWidth1440(50)
+                &Text
+                    gap: calcWidth1440(40)
+                    h2
+                        font-size: calcWidth1440(28)
+                    p
+                        font-size: calcWidth1440(20)
+                    &Btn
+                        @include customBtn(calcWidth1440(250), calcWidth1440(50), calcWidth1440(20))
+                        box-shadow: 6px 5px 8px 0px #ffffff2a
+                        margin: 0 auto
+@media (max-width:768px)
+    .video
+        &Container
+            width: 90%
+            padding: calcWidth768(40) 0
+            &Title
+                h2
+                    font-size: calcWidth768(30)
+                p
+                    font-size: calcWidth768(24)
+            &Content
+                margin-top: calcWidth768(20)
+                display: grid
+                grid-template-columns: 1fr
+                gap: calcWidth768(20)
+                &Video
+                    height: calcWidth768(450)
+                    &Img
+                        &Text
+                            &Circle
+                                width: calcWidth768(200)
+                                height: calcWidth768(200)
+                                svg
+                                    text
+                                        font-size: calcWidth768(11)
+                                &Img
+                                    width: calcWidth768(50)
+                &Text
+                    gap: calcWidth768(20)
+                    h2
+                        font-size: calcWidth768(28)
+                    p
+                        font-size: calcWidth768(20)
+                    &Btn
+                        @include customBtn(calcWidth768(250), calcWidth768(50), calcWidth768(20))
+                        box-shadow: 6px 5px 8px 0px #ffffff2a
+                        margin: 0 auto
+@media (max-width:480px)
+    .video
+        &Container
+            width: 90%
+            padding: calcWidth480(40) 0
+            &Title
+                display: flex 
+                flex-direction: column
+                gap: calcWidth480(20)
+                h2
+                    font-size: calcWidth480(24)
+                p
+                    font-size: calcWidth480(18)
+                    max-width: 100%
+            &Content
+                margin-top: calcWidth480(20)
+                display: grid
+                grid-template-columns: 1fr
+                gap: calcWidth480(40)
+                &Video
+                    height: calcWidth480(300)
+                    &Img
+                        &Text
+                            &Circle
+                                width: calcWidth480(180)
+                                height: calcWidth480(180)
+                                svg
+                                    text
+                                        font-size: calcWidth480(11)
+                                &Img
+                                    width: calcWidth480(40)
+                &Text
+                    gap: calcWidth480(20)
+                    h2
+                        font-size: calcWidth480(24)
+                    p
+                        font-size: calcWidth480(18)
+                    &Btn
+                        @include customBtn(100%, calcWidth480(50), calcWidth480(20))
+                        box-shadow: 6px 5px 8px 0px #ffffff2a
+                        margin: 0 auto
