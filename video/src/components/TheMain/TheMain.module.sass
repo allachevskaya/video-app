@@ -14,6 +14,7 @@
 @media (max-width:1920px)
     .main
         min-height: auto
+        padding-bottom: calcWidth1920(40)
         &Container
             width: calcWidth1920(1660)
 @media (max-width:1440px)
@@ -23,8 +24,15 @@
 
 @media (max-width:768px)
     .main
-        padding: calcWidth768(20) 0
+        padding: calcWidth768(0) 0 calcWidth768(40)
         &Container
             display: flex
             flex-direction: column
             gap: calcWidth768(20)
+@media (max-width:480px)
+    .main
+        padding: 0 0 calcWidth480(20)
+        &Container
+            display: flex
+            flex-direction: column
+            gap: calcWidth480(20)

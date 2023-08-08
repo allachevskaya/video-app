@@ -4,17 +4,18 @@ import styles from './MainImage.module.sass'
 
 interface mainImgProps {
     title: string;
-    colorTitle: string
+    colorTitle: string;
+    image: string
 }
 
-const MainImage: React.FC<mainImgProps> = ({ title, colorTitle }) => {
+const MainImage: React.FC<mainImgProps> = ({ title, colorTitle,image }) => {
     return (
         <div className={styles.images}>
             <div className={styles.imagesImg}>
                 <Image
                     width={1000}
                     height={1000}
-                    src='/main/mainOne.jpg'
+                    src= {image}
                     alt=''
                     priority
                     quality={100}

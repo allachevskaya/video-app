@@ -22,7 +22,7 @@ const Video: React.FC<VideoProps> = ({ background, color, text }) => {
                             <Image
                                 width={1000}
                                 height={1000}
-                                src='/images/videoBag.jpg'
+                                src='/images/video.png'
                                 alt=''
                             />
                             <div className={styles.videoContainerContentVideoImgText}>
@@ -55,7 +55,7 @@ const Video: React.FC<VideoProps> = ({ background, color, text }) => {
                         <p style={{ color: `${color}` }}>Если тебе понравилось наше видео, оставляй заявку и наш менеджер проконсультирует тебя по всем интересующим вопросам, а так же поможет определиться с концепцией свадебного видео.
                         </p>
                         <div className={styles.videoContainerContentTextBtn}>
-                        Заявка на видео
+                            Заявка на видео
                         </div>
                     </div>
                 </div>
